@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-/* ----reusable-code--- */
+/* ----this part of code can be use again in future--- */
 :root {
   --violet: #5d58ef;
   --blue: #01acfd;
@@ -36,7 +36,8 @@
 li:hover a {
   text-decoration: underline;
 }
-/* individual codes */
+
+/* different part code*/
 
 .marquee {
   background: var(--violet);
