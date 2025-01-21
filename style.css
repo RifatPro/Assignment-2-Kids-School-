@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", serif;
+  box-sizing: border-box;
+}
+
+/* ----reusable-code--- */
+:root {
+  --violet: #5d58ef;
+  --blue: #01acfd;
+  --sky-blue: #05d4df;
+  --orange: #fea301;
+  --white: #ffffff;
+}
+.display-flex {
+  display: flex;
+}
+.primary-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12.3rem;
+  padding: 0.8rem;
+  border: none;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.25rem;
+  border-radius: 0.75rem;
+  transition: 0.3s ease-in-out;
+}
+.primary-btn:hover {
+  background: var(--violet);
+}
+li:hover a {
+  text-decoration: underline;
+}
+/* individual codes */
+
+.marquee {
+  background: var(--violet);
+  overflow: hidden;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marquee p {
+  padding: 0.5rem 1rem;
+  color: var(--white);
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 600;
+  animation: scroll 5s linear infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+nav {
+  margin: 1.75rem auto;
+  justify-content: space-around;
+  align-items: center;
+}
+.logo {
+  align-items: center;
+  cursor: pointer;
+}
+li > a,
+li {
+  text-decoration: none;
+  list-style: none;
+  margin: 0 2rem;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--orange);
+}
+
+ul li:nth-child(1) a {
+  color: var(--orange);
+}
+
+ul li:nth-child(2) a {
+  color: var(--blue);
+}
+
+ul li:nth-child(3) a {
+  color: var(--sky-blue);
+}
+
+ul li:nth-child(4) a {
+  color: var(--violet);
+}
+
+.contact-btn {
+  background-color: var(--orange);
+}
+.toggle-bar {
+  display: none;
+}
+.hero {
+  justify-content: center;
+  align-items: center;
+}
+.hero-text {
+  max-width: 40rem;
+  margin-right: 3.5rem;
+}
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.hero-text p {
+  margin: 1.5rem 0;
+  color: #111;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.hero-text button {
+  background-color: black;
+}
+h1 span:nth-child(1) {
+  color: var(--orange);
+}
+h1 span:nth-child(3) {
+  color: var(--blue);
+}
+
+.curriculum {
+  margin: 4rem auto;
+  background: url(assets/bg.png);
+  background-size: contain;
+  background-repeat: repeat;
+}
+.curriculum > h1 {
+  text-align: center;
+  color: #000;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.curriculum-card-container {
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 5rem auto;
+}
+.curriculum-card {
+  max-width: 23rem;
+  height: 30rem;
+  padding: 3.8rem 3rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32.069px;
+  flex-shrink: 0;
+  border-radius: 18.864px;
+  box-shadow: 0px 0px 28.296px 0.943px rgba(0, 0, 0, 0.05) inset;
+  transition: 0.3s ease-in-out;
+}
+.curriculum-card:hover {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+.curriculum-card:nth-child(1) {
+  border: 0.943px solid #def5ff;
+  background: linear-gradient(180deg, #def5ff 0%, rgba(255, 255, 255, 0) 40%),
+    #fff;
+}
+.curriculum-card:nth-child(2) {
+  border: 0.943px solid #fff4dc;
+  background: linear-gradient(180deg, #fff4dc 0%, rgba(255, 255, 255, 0) 40%),
+    #fff;
+}
+.curriculum-card:nth-child(3) {
+  border: 0.943px solid #f2e8ff;
+  background: linear-gradient(180deg, #eee1ff 0%, rgba(255, 255, 255, 0) 40%),
+    #fff;
+}
+.curriculum-card > p {
+  text-align: center;
+  color: #808080;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.read-more {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.read-more:hover {
+  text-decoration: underline;
+}
+.curriculum-card:nth-of-type(1) .read-more {
+  color: var(--blue);
+}
+.curriculum-card:nth-of-type(2) .read-more {
+  color: var(--orange);
+}
+.curriculum-card:nth-of-type(3) .read-more {
+  color: var(--violet);
+}
+.sliders {
+  display: flex;
+  justify-content: center;
+}
+.left-arrow,
+.right-arrow {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--white);
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  background: var(--orange);
+  border: none;
+  margin: 0 0.3rem;
+  transition: 0.3s ease-in-out;
+}
+.left-arrow:hover,
+.right-arrow:hover {
+  background-color: var(--violet);
+}
+.stories {
+  padding: 5rem 0;
+  background: linear-gradient(
+      0deg,
+      rgba(254, 163, 1, 0.3) 0%,
+      rgba(255, 255, 255, 0.3) 100%
+    ),
+    url(assets/bg.png);
+  background-size: cover;
+  background-repeat: repeat-y;
+}
+.stories > h1 {
+  text-align: center;
+  color: #000;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.stories-flex-container {
+  gap: 1.2rem;
+  justify-content: center;
+  margin: 5rem auto;
+}
+
+.big-story {
+  width: 34rem;
+}
+.big-story p {
+  padding: 1rem 3rem;
+  text-align: start;
+}
+.big-story button {
+  background-color: var(--sky-blue);
+}
+.stories-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 18rem);
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+.story-box-title {
+  padding: 5rem 0;
+}
+
+.stories-box {
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+}
+
+.stories-box img {
+  width: 100%;
+  height: auto;
+}
+
+.date {
+  background: #95b226;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1.25rem;
+  font-size: 0.8rem;
+  border: none;
+  position: relative;
+  top: -20px;
+}
+.vlt-btn {
+  background-color: var(--violet);
+}
+.stories-box h1 {
+  font-size: 1.2rem;
+  color: #333;
+  padding: 0 2rem 2rem;
+  text-align: start;
+}
+.view-all {
+  background-color: black;
+  margin: auto;
+}
+
+footer {
+  color: var(--white);
+  background-color: var(--blue);
+  justify-content: space-evenly;
+  align-items: start;
+  padding: 8rem 0;
+}
+.footer-main {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: start;
+}
+.footer-main h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.first-flex {
+  max-width: 22rem;
+}
+.first-flex p {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.second-flex > ul > li > a {
+  color: var(--white);
+  margin: 0;
+}
+.second-flex > ul > li {
+  margin: 0;
+}
+.second-flex {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+.social-media {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+}
+/* mobile responsive */
+@media screen and (max-width: 767px) {
+  .nav-links,
+  .contact-btn,
+  .logo > h1 {
+    display: none;
+  }
+  .logo img {
+    height: 47px;
+    width: 47px;
+  }
+  nav {
+    margin: 0;
+    padding: 1rem;
+    justify-content: space-between;
+  }
+  .toggle-bar {
+    display: block;
+    font-size: 2rem;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem auto;
+  }
+
+  .hero img {
+    order: -1;
+    max-width: 80%;
+  }
+  .hero-text {
+    text-align: center;
+    margin: 1.5rem auto;
+    max-width: 22rem;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .hero-text button {
+    margin: auto;
+  }
+  .curriculum-card-container {
+    flex-direction: column;
+    margin: 1.3rem auto;
+  }
+  .curriculum > h1 {
+    font-size: 2rem;
+  }
+  .sliders {
+    display: none;
+  }
+  .big-story {
+    display: none;
+  }
+  .stories-flex-container {
+    margin: 2rem auto;
+  }
+  .stories-grid-container {
+    grid-template-columns: repeat(2, 42%);
+    gap: 1rem;
+  }
+  .stories-box h1 {
+    font-size: 0.6rem;
+    padding: 1.2rem;
+  }
+  .date {
+    font-size: 0.5rem;
+    padding: 0.4rem;
+  }
+  footer {
+    flex-direction: column;
+    padding: 4rem 1rem;
+  }
+  footer h1 {
+    font-size: 1.7rem;
+  }
+  .footer-main h1 {
+    font-size: 1.7rem;
+  }
+  .footer-main {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .first-flex p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .second-flex {
+    margin: 2rem 0;
+  }
+}
